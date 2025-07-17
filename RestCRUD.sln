@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.13.35931.197 d17.13
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RestCRUD", "RestCRUD\RestCRUD.csproj", "{AA3C0C45-7087-4944-ABC8-17770AF861DE}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AA3C0C45-7087-4944-ABC8-17770AF861DE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AA3C0C45-7087-4944-ABC8-17770AF861DE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AA3C0C45-7087-4944-ABC8-17770AF861DE}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{AA3C0C45-7087-4944-ABC8-17770AF861DE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AA3C0C45-7087-4944-ABC8-17770AF861DE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AA3C0C45-7087-4944-ABC8-17770AF861DE}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E994B91A-7E86-4F02-8419-97C80438DF61}
+	EndGlobalSection
+EndGlobal
