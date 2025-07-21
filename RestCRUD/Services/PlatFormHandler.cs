@@ -12,6 +12,7 @@ namespace RestCRUD.Services
         public HttpMessageHandler GetPlatFormHandler()
         {
 #if ANDROID
+
 #if NET7_0_OR_GREATER
 
             var h = new Xamarin.Android.Net.AndroidMessageHandler();

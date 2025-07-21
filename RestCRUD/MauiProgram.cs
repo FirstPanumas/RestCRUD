@@ -1,5 +1,6 @@
 ﻿using Microsoft.Extensions.Logging;
-
+using RestCRUD.Repositories;
+using RestCRUD.Services;
 namespace RestCRUD
 {
     public static class MauiProgram
@@ -16,10 +17,20 @@ namespace RestCRUD
                 });
 
 #if DEBUG
-    		builder.Logging.AddDebug();
+            builder.Logging.AddDebug();
 #endif
 
-            return builder.Build();
+            builder.Services.AddSingleton<IPlatFormHandler, PlatFormHandler>();
+            builder.Services.AddSingleton<ICustomerRepository, CustomerRepository>();
+            builder.Services.AddSingleton<ICustomerService, CustomerService>();
+
+            builder.Services.AddSingleton<MainPage>();
+            builder.Services.AddSingleton<CustomerDetail>();
+
+            return builder.Build(); 
+
+            
+
         }
     }
 }
