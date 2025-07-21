@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace RestCRUD.Services
 {
-    public interface IPlatFormHandler
+    public interface IPlatformHandler
     {
-        HttpMessageHandler GetPlatFormHandler();
+        HttpMessageHandler GetPlatformHandler();
     }
 }

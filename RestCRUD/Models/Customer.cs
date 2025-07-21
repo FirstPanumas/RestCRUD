@@ -6,9 +6,9 @@ using System.Threading.Tasks;
 
 namespace RestCRUD.Models
 {
-    internal class Customer
-    {
-        public Guid Customerid { get; set; }
+    public class Customer
+    {   
+        public Guid CustomerId { get; set; }
         public string FullName { get; set; } 
         public string Address { get; set; }
     }
