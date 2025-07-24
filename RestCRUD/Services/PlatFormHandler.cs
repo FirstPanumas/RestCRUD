@@ -9,7 +9,7 @@ namespace RestCRUD.Services
 {
     public class PlatformHandler : IPlatformHandler
     {
-        public HttpMessageHandler GetPlatFormHandler()
+        public HttpMessageHandler GetPlatformHandler()
         {
 #if ANDROID
 

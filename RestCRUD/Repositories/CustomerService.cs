@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using RestCRUD.Models;
+using RestCRUD.Services;
 namespace RestCRUD.Repositories
 {
-    public class CustomerService : ICustomerRepository
+    public class CustomerService : ICustomerService
     {
-        private readonly ICustomerRepository _customerRepo;
+        private readonly ICustomerService _customerRepo;
 
-        public CustomerService(ICustomerRepository customerRepo)
+        public CustomerService(ICustomerService customerRepo)
         {
             _customerRepo = customerRepo;
         }
@@ -24,15 +25,13 @@ namespace RestCRUD.Repositories
 
             return _customerRepo.CreateAsync(c);
         }
-
-        public async Task<List<Customer>> GetCustomersAsync()
+        public Task<List<CustomerDetail>> ReadAsync()
         {
             if (Connectivity.Current.NetworkAccess != NetworkAccess.Internet)
             {
                 return null;
             }
-
-            return await _customerRepo.ReadAsync();
+            return _customerRepo.ReadAsync();
         }
 
         public Task UpdateAsync(Customer c)
@@ -50,8 +49,9 @@ namespace RestCRUD.Repositories
             {
                 return null;
             }
-
-            return _customerRepo.DeleteAsync(c.Customerid.ToString());
-
+            return _customerRepo.DeleteAsync(c);
         }
+
+      
     }
+}

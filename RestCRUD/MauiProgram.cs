@@ -20,7 +20,7 @@ namespace RestCRUD
             builder.Logging.AddDebug();
 #endif
 
-            builder.Services.AddSingleton<IPlatFormHandler, PlatFormHandler>();
+            builder.Services.AddSingleton<IPlatformHandler, PlatformHandler>();
             builder.Services.AddSingleton<ICustomerRepository, CustomerRepository>();
             builder.Services.AddSingleton<ICustomerService, CustomerService>();
 

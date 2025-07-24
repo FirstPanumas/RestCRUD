@@ -23,6 +23,9 @@ namespace RestCRUD.Repositories
         {
             _uri = DeviceInfo.Platform == DevicePlatform.Android ? "http://10.0.2.2:5000" : "http://localhost:5000";
             _url = $"{_uri}/api/Customer";
+
+
+
             _clientHandler = clientHandler;
             var h = _clientHandler.GetPlatformHandler();
             if (h != null)
@@ -77,7 +80,7 @@ namespace RestCRUD.Repositories
             }
             return Customers;
         }
-        public async Task UpdataAsync(Customer c)
+        public async Task UpdateAsync(Customer c)
         {
             try
             {
@@ -109,7 +112,9 @@ namespace RestCRUD.Repositories
             {
                 Console.WriteLine(ex.Message);
             }
+            
         }
 
+         
     }
 }
